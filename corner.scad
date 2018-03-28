@@ -51,8 +51,6 @@ module corner() {
 
   // corner
   translate([0, windowMaterialWidth, 0]) cube([materialWidth, materialWidth, materialWidth]);
-
-  cornerBackplate();
 }
 
 module cornerPlateScrews(screwTerminalWidth) {
@@ -86,4 +84,6 @@ module cornerBackplate() {
 }
 
 // Preview
-color("red") corner();
+color("red") mirror([1, 0, 0]) translate([-40, -35, 0]) rotate([0, 0, -90]) corner();
+color("red") translate([0, 5, 0]) rotate([0, 0, 180]) corner();
+color("red") translate([18, -18, 45]) rotate([-30, -36, 0]) cornerBackplate();
