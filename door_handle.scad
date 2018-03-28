@@ -43,7 +43,7 @@ module handleShape() {
   }
 }
 
-module handle() {
+module door_handle() {
   screwCenterOffset = (length/2 - mountPointLength/2);
   screwHeightOffset = materialWidth;
   difference() {
@@ -53,4 +53,4 @@ module handle() {
   }
 }
 
-color("grey") handle();
+color("grey") door_handle();

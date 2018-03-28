@@ -1,6 +1,6 @@
 use <corner.scad>;
 use <ikea_lack_table.scad>;
-
+use <door_handle.scad>;
 
 // Table tower
 color("black") ikea_lack_table();
@@ -27,8 +27,11 @@ module windows() {
   translate([50, 0, 450]) window();
   rotate([0, 0, 90]) translate([50, -5, 450]) window();
   rotate([0, 0, 90]) translate([50, -550, 450]) window();
+  translate([50, 545, 450]) window();
 }
 
 translate([0, 0, 450]) windowMounts();
 translate([0, 0, 850]) mirror([0, 0, 1]) windowMounts();
 color("grey", 0.3) windows();
+
+color("orange") translate([450, 00.1, 640]) rotate([0, -90, 90]) door_handle();
